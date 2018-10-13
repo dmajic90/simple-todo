@@ -6,7 +6,8 @@ class Task extends Component {
 		super(props);
 		this.state = {
 			text: this.props.text,
-			checked: false
+			checked: false,
+			id: this.props.id
 		};
 		this.handleCheck = this.handleCheck.bind(this);
 	}
@@ -16,14 +17,17 @@ class Task extends Component {
 	}
 	render() {
 		return (
-			<div className="task-container">
-				<span className={this.getTextClasses()}>{this.state.text}</span>
-				<input
-					className="task-checkbox"
-					type="checkbox"
-					onChange={this.handleCheck}
-				/>
-			</div>
+			<li className="task-container">
+				<div className="task-id">{this.state.id}</div>
+				<div className={this.getTextClasses()}>
+					{this.state.text}
+					<input
+						className="task-checkbox"
+						type="checkbox"
+						onChange={this.handleCheck}
+					/>
+				</div>
+			</li>
 		);
 	}
 

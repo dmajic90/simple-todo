@@ -1,0 +1,26 @@
+.button {
+	background-color: #27919d;
+	border: none;
+	color: #d6dbda;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 5px;
+	margin: 5px;
+	width: 160px;
+}
+
+.text-area {
+	line-height: 12px;
+	padding: 5px;
+}
+.input-container {
+	padding: 0px;
+	clear: both;
+	margin: auto;
+	width: inherit;
+	text-align: center;
+}

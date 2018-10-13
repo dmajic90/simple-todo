@@ -7,7 +7,8 @@ class Table extends Component {
 		super(props);
 		this.state = {
 			text: '',
-			tasks: []
+			tasks: [],
+			counter: 1
 		};
 		this.textChange = this.textChange.bind(this);
 		this.addTask = this.addTask.bind(this);
@@ -17,10 +18,13 @@ class Table extends Component {
 		this.setState({ text: e.target.value });
 	}
 	addTask(e) {
-		const { tasks, text } = this.state;
-		tasks.push(text);
-		this.setState({ tasks });
-		this.setState({ text: '' });
+		if (e.key === 'Enter') {
+			const { tasks, text } = this.state;
+			tasks.push({ text: text, key: this.state.counter });
+			this.setState({ tasks });
+			this.setState({ text: '' });
+			this.setState({ counter: this.state.counter + 1 });
+		}
 	}
 	removeTask(e) {
 		const elements = document.getElementsByClassName('task-finished');
@@ -34,29 +38,28 @@ class Table extends Component {
 		return (
 			<Fragment>
 				<ul>
-					{tasks.map(text => (
-						<Task text={text} />
+					{tasks.map(task => (
+						<Task text={task.text} key={task.key} id={task.key} />
 					))}
 				</ul>
-				<input
-					type="text"
-					name="taskText"
-					placeholder="Enter a new task"
-					value={this.state.text}
-					onChange={this.textChange}
-				/>
-				<input
-					type="button"
-					name="addTask"
-					value="Add a new task"
-					onClick={this.addTask}
-				/>
-				<input
-					type="button"
-					name="removeFinishedTasks"
-					value="Remove finished tasks"
-					onClick={this.removeTask}
-				/>
+				<div className="input-container">
+					<input
+						type="text"
+						name="taskText"
+						className="text-area"
+						placeholder="Enter a new task"
+						value={this.state.text}
+						onChange={this.textChange}
+						onKeyPress={this.addTask}
+					/>
+					<input
+						type="button"
+						className="button"
+						name="removeFinishedTasks"
+						value="Remove finished tasks"
+						onClick={this.removeTask}
+					/>
+				</div>
 			</Fragment>
 		);
 	}
