@@ -1,0 +1,7 @@
+.task-text {
+	text-align: center;
+	margin: 10px;
+}
+.task-finished {
+	text-decoration: line-through;
+}
