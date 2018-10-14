@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Task from './task';
 import '../styles/table.css';
 
@@ -44,8 +44,8 @@ class Table extends Component {
 	render() {
 		const { tasks } = this.state;
 		return (
-			<Fragment>
-				<ul>
+			<div>
+				<ul className="task-list">
 					{tasks.map(task => (
 						<Task text={task.text} key={task.key} id={task.key} />
 					))}
@@ -69,7 +69,7 @@ class Table extends Component {
 						onClick={this.removeTask}
 					/>
 				</div>
-			</Fragment>
+			</div>
 		);
 	}
 }

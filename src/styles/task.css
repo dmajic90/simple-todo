@@ -3,6 +3,7 @@
 	height: 18px;
 	margin-left: 20px;
 	padding-left: 10px;
+	border-bottom: 2px dotted #27919d;
 }
 .task-finished {
 	text-decoration: line-through;

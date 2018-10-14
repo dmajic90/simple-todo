@@ -20,5 +20,10 @@
 .input-container {
 	padding: 0px;
 	clear: both;
-	margin: auto;
+	margin: 10px auto 0px;
+}
+
+.task-list {
+	padding: 0px;
+	margin: 10px 0px 0px;
 }
