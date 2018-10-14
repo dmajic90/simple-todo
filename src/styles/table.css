@@ -2,7 +2,6 @@
 	background-color: #27919d;
 	border: none;
 	color: #d6dbda;
-	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 12px;
@@ -22,5 +21,4 @@
 	padding: 0px;
 	clear: both;
 	margin: auto;
-	text-align: center;
 }

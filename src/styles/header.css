@@ -1,13 +1,12 @@
 .header-div {
-	width: 100%;
 	background: #d6dbda;
-	margin: auto;
-	padding: 10px;
+	margin: 50px auto 0px;
 }
 .header-div p {
-	text-align: center;
 	font-size: 80px;
 	font-weight: bold;
 	color: #27919d;
 	text-shadow: 2px 2px 0px #1a5e65;
+	margin: 0px auto;
+	border-bottom: 3px solid #27919d;
 }
