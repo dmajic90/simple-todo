@@ -6,6 +6,7 @@
 }
 .task-finished {
 	text-decoration: line-through;
+	opacity: 0.5;
 }
 .task-id {
 	width: 20px;
