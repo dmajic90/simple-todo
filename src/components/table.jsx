@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Task from './task';
-import './table.css';
+import '../styles/table.css';
 
 class Table extends Component {
 	constructor(props) {
@@ -19,11 +19,19 @@ class Table extends Component {
 	}
 	addTask(e) {
 		if (e.key === 'Enter') {
+			this.checkTask(this.state.text);
+		}
+	}
+
+	checkTask(t) {
+		if (t !== '') {
 			const { tasks, text } = this.state;
 			tasks.push({ text: text, key: this.state.counter });
 			this.setState({ tasks });
 			this.setState({ text: '' });
 			this.setState({ counter: this.state.counter + 1 });
+		} else {
+			alert('Please enter a task before pressing Enter');
 		}
 	}
 	removeTask(e) {
@@ -47,7 +55,7 @@ class Table extends Component {
 						type="text"
 						name="taskText"
 						className="text-area"
-						placeholder="Enter a new task"
+						placeholder="Set a new task and press Enter"
 						value={this.state.text}
 						onChange={this.textChange}
 						onKeyPress={this.addTask}
