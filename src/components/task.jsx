@@ -12,9 +12,20 @@ class Task extends Component {
 		this.handleCheck = this.handleCheck.bind(this);
 	}
 
+	getTextClasses() {
+		let classes = 'task-text task-';
+		if (this.state.checked === false) {
+			classes += 'unfinished';
+		} else {
+			classes += 'finished';
+		}
+		return classes;
+	}
+
 	handleCheck() {
 		this.setState({ checked: !this.state.checked });
 	}
+
 	render() {
 		return (
 			<li className="task-container">
@@ -29,16 +40,6 @@ class Task extends Component {
 				</div>
 			</li>
 		);
-	}
-
-	getTextClasses() {
-		let classes = 'task-text task-';
-		if (this.state.checked === false) {
-			classes += 'unfinished';
-		} else {
-			classes += 'finished';
-		}
-		return classes;
 	}
 }
 

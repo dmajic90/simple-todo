@@ -1,21 +1,7 @@
-.task-text {
-	text-align: left;
-	height: 18px;
-	margin-left: 20px;
-	padding-left: 10px;
-	border-bottom: 2px dotted #27919d;
+.task-checkbox {
+	float: right;
 }
-.task-finished {
-	text-decoration: line-through;
-	color: rgba(0, 0, 0, 0.5);
-}
-.task-id {
-	width: 20px;
-	height: 18px;
-	float: left;
-	color: #27919d;
-	font-weight: bold;
-}
+
 .task-container {
 	width: inherit;
 	height: 20px;
@@ -23,6 +9,24 @@
 	clear: both;
 	overflow: hidden;
 }
-.task-checkbox {
-	float: right;
+
+.task-finished {
+	text-decoration: line-through;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.task-id {
+	width: 20px;
+	height: 18px;
+	float: left;
+	color: #27919d;
+	font-weight: bold;
+}
+
+.task-text {
+	text-align: left;
+	height: 18px;
+	margin-left: 20px;
+	padding-left: 10px;
+	border-bottom: 2px dotted #27919d;
 }

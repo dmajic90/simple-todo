@@ -14,9 +14,7 @@ class Table extends Component {
 		this.addTask = this.addTask.bind(this);
 		this.removeTask = this.removeTask.bind(this);
 	}
-	textChange(e) {
-		this.setState({ text: e.target.value });
-	}
+
 	addTask(e) {
 		if (e.key === 'Enter') {
 			this.checkTask(this.state.text);
@@ -34,6 +32,7 @@ class Table extends Component {
 			alert('Please enter a task before pressing Enter');
 		}
 	}
+
 	removeTask(e) {
 		const elements = document.getElementsByClassName('task-finished');
 		while (elements.length > 0) {
@@ -71,6 +70,10 @@ class Table extends Component {
 				</div>
 			</div>
 		);
+	}
+
+	textChange(e) {
+		this.setState({ text: e.target.value });
 	}
 }
 

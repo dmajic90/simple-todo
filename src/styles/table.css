@@ -12,11 +12,6 @@
 	width: 160px;
 }
 
-.text-area {
-	line-height: 12px;
-	padding: 5px;
-	width: 200px;
-}
 .input-container {
 	padding: 0px;
 	clear: both;
@@ -26,4 +21,10 @@
 .task-list {
 	padding: 0px;
 	margin: 10px 0px 0px;
+}
+
+.text-area {
+	line-height: 12px;
+	padding: 5px;
+	width: 200px;
 }
