@@ -59,6 +59,7 @@ class Table extends Component {
 						value={this.state.text}
 						onChange={this.textChange}
 						onKeyPress={this.addTask}
+						maxLength="70"
 					/>
 					<input
 						type="button"
